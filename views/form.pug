@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form(method='POST' action='/new')
+    h1 Add new message
+
+    label(for='name') Name: 
+    input#input-name(type='text', placeholder='Your name '  name='author' required)
+    label(for='message') Message: 
+    input#input-message(type='text', placeholder='Your message '  name='msg' required)
+    button(type='submit') POST
+
+  a(href='/') Go Back
